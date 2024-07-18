@@ -201,7 +201,7 @@ img {
     margin-bottom: 48px;
 }
 
-.section-hero-button {
+.section-hero-button, .form-button {
     background-color: #4d5ae5;
     font-weight: 500;
     font-size: 16px;
@@ -221,7 +221,9 @@ img {
 }
 
 .section-hero-button:hover,
-.section-hero-button:focus {
+.section-hero-button:focus,
+.form-button:hover,
+.form-button:focus {
     background-color: #404BBF;
 }
 
@@ -468,3 +470,111 @@ img {
 }
 
 /* -- */
+
+.modal-overlay {
+    background-color: rgba(46, 47, 66, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.modal-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal {
+    width: 408px;
+    min-height: 584px;
+    overflow-y: auto;
+    border-radius: 4px;
+    background-color: #fcfcfc;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 24px;
+}
+
+.close-btn {
+    display: block;
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    box-shadow: none;
+    margin-bottom: 24px;
+}
+
+.modal-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    margin-bottom: 16px;
+}
+.form {}
+
+.form-field {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 8px;
+}
+.form-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.form-input {
+    font-family: inherit;
+    padding-left: 38px;
+    padding-right: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    width: 360px;
+    outline: transparent;
+}
+
+.form-input:focus {
+    border-color: #4D5AE5;
+}
+
+.form-input:focus + .form-icon {
+    fill: #4d5ae5;
+}
+
+.form-input::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+}
+
+.form-icon {
+    fill: #2e2f42;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form-button {}
