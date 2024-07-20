@@ -559,7 +559,6 @@ img {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -581,7 +580,7 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: transfom 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overlay:not(.is-open) .modal {
@@ -680,11 +679,16 @@ img {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     background-color: transparent;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
     width: 100%;
     min-height: 120px;
     padding: 8px 16px;
     resize: none;
     outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus,
@@ -704,7 +708,7 @@ img {
     color: rgba(46, 47, 66, 0.4);
 }
 
-.check {
+.modal-check {
     margin-bottom: 24px;
 }
 
@@ -730,6 +734,13 @@ img {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.privacy-chek {
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    display: inline-flex;
+    fill: transparent;
+
 }
 
 .modal-check:checked + .check-text span {
